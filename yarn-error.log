@@ -1,0 +1,72 @@
+Arguments: 
+  /Users/apple/.nvm/versions/node/v10.13.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js run build
+
+PATH: 
+  /Users/apple/.nvm/versions/node/v10.13.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/apple/.nvm/versions/node/v10.13.0/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  10.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/apple/liupengfei/projects/react-ssr/package.json: Unexpected token / in JSON at position 270
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+      "name": "react-ssr-music",
+      "version": "1.0.0",
+      "description": "使用react+koa的音乐同构项目",
+      "main": "main.js",
+      "scripts": {
+          "start": "webpack-dev-server --hot --config build/webpack.dev.config.js",
+          "server": "node server/index.js",
+          // "build": "webpack --config ./build/webpack.dev.config.js --watch"
+          "build": "webpack --config ./build/webpack.dev.config.js"
+      },
+      "devDependencies": {
+          "@babel/cli": "^7.12.10",
+          "@babel/core": "^7.12.10",
+          "@babel/plugin-transform-runtime": "^7.12.10",
+          "@babel/preset-env": "^7.12.11",
+          "@babel/preset-react": "^7.12.10",
+          "babel-loader": "^8.2.2",
+          "css-loader": "^5.0.1",
+          "file-loader": "^6.2.0",
+          "html-loader": "^1.3.2",
+          "html-webpack-plugin": "^4.5.1",
+          "less": "^4.1.0",
+          "less-loader": "^7.3.0",
+          "style-loader": "^2.0.0",
+          "terser-webpack-plugin": "^5.1.1",
+          "url-loader": "^4.1.1",
+          "webpack": "^5.17.0",
+          "webpack-cli": "^3.3.12",
+          "webpack-dev-server": "^3.11.2",
+          "webpack-merge": "^5.7.3"
+      },
+      "dependencies": {
+          "@babel/register": "^7.12.10",
+          "koa": "^2.13.1",
+          "koa-router": "^10.0.0",
+          "koa-static": "^5.0.0",
+          "koa-views": "^7.0.0",
+          "react": "^17.0.1",
+          "react-dom": "^17.0.1"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
