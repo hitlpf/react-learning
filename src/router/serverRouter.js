@@ -1,10 +1,10 @@
-
 const Router = require('koa-router');
 const router = new Router();
+const router2 = new Router();
 
 const renderResult = require('../controller/renderResult');
 
-module.exports = app =>{
+module.exports = app => {
     // 服务端路由
     // router.get('/', renderResult.Spa);
     router.get('/schedule', renderResult.Spa);
