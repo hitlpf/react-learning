@@ -1,6 +1,5 @@
 const Router = require('koa-router');
 const router = new Router();
-const router2 = new Router();
 
 const renderResult = require('../controller/renderResult');
 

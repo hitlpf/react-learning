@@ -13,7 +13,7 @@
     },
     "lint-staged": {
         "src/**/*.js": [
-            "./node_modules/.bin/eslint --quiet --fix --ext .js",
+            "./node_modules/.bin/eslint .js",
             "git add"
         ]
     },
@@ -43,6 +43,7 @@
         "babel-loader": "^8.2.2",
         "css-loader": "^5.0.1",
         "eslint": "^7.20.0",
+        "eslint-config-airbnb-base": "^14.2.1",
         "eslint-config-prettier": "^7.2.0",
         "eslint-config-react-app": "^6.0.0",
         "eslint-plugin-flowtype": "^5.2.2",

@@ -1,5 +1,6 @@
 {
     "env":{
+        "commonjs": true,
         "amd": true,
         "browser": true,
         "node": true,
@@ -15,6 +16,7 @@
     ],
     "parser": "babel-eslint",
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-unused-expressions": 0
     }
 }
