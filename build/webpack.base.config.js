@@ -3,8 +3,8 @@ const { resolve } = require('./utils');
 
 module.exports = {
     entry: {
-        main: resolve('app/main.js'),
-        head: resolve('app/head.js'),
+        main: resolve('src/app/main.js'),
+        head: resolve('src/app/head.js'),
         // pageA: resolve('app/pageA.js'),
         // pageB: resolve('app/pageB.js')
     },
@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.(js|jsx)$/,
                 // 只编译app文件夹下的文件
-                include: resolve('app'),
+                include: resolve('src/app'),
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -26,12 +26,12 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                include: resolve('app'),
+                include: resolve('src/app'),
                 loader: 'html-loader'
             },
             {
                 test: /\.(less)$/,
-                include: resolve('app'),
+                include: resolve('src/app'),
                 use: [
                    'style-loader',
                    'css-loader',
@@ -55,7 +55,7 @@ module.exports = {
     resolve: {
         // 设置路径别名
         alias: {
-            '@': resolve('app'),
+            '@': resolve('src/app'),
         },
         // 文件后缀自动补全, 就是你import文件的时候如果没写后缀名就会优先找下面这几个
         extensions: [ '.js', '.jsx' ],
@@ -65,7 +65,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: resolve('template/app.html'),
+            template: resolve('src/template/app.html'),
             inject: true, // 为true会默认插入生成的js
             cache: false,
             minify: {

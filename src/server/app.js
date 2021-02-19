@@ -10,13 +10,13 @@ const router = require('../router/serverRouter');
 //koa-views设置文件路径和文件类型(路径views一定要和项目中页面文件路径一致)
 //可以是任何类型的文件：html，也可以是模块文件（pug或nunjucks），nunjucks使用时不使用koa-views模块而是使用koa-nunjucks-2模块
 app.use(
-    views(path.resolve(__dirname, `../dist`), {
+    views(path.resolve(__dirname, `../../dist`), {
         extension: 'html'
     })
 );
 
 // static path
-app.use(assets(path.join(__dirname, '../dist')));
+app.use(assets(path.join(__dirname, '../../dist')));
 
 // 注册路由
 router(app);
