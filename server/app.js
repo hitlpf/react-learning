@@ -1,4 +1,4 @@
-import Koa from 'koa';
+import Koa from 'koa'; // node默认只能用require来导入模块，如果用import得用babel来转换
 
 const path = require('path');
 const views = require("koa-views");
