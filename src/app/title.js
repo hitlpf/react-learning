@@ -1,12 +1,12 @@
 import React from 'react';
 
 class Title extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state = {name: 'andy', date2: new Date()};
+        this.state = { name: 'andy', date2: new Date() };
     }
-    render(){
-        return <h1>hello, { this.props.name}</h1>
+    render() {
+        return <h1>hello, {this.props.name}</h1>;
     }
 }
 

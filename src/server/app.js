@@ -1,7 +1,7 @@
 import Koa from 'koa'; // node默认只能用require来导入模块，如果用import得用babel来转换
 
 const path = require('path');
-const views = require("koa-views");
+const views = require('koa-views');
 const assets = require('koa-static');
 const app = new Koa();
 
@@ -22,5 +22,5 @@ app.use(assets(path.join(__dirname, '../../dist')));
 router(app);
 
 app.listen(9000, () => {
-    console.log(`node服务已经启动, 请访问localhost:9000`)
+    console.log(`node服务已经启动, 请访问localhost:9000`);
 });
