@@ -2,6 +2,7 @@ const Router = require('koa-router');
 const router = new Router();
 
 const renderResult = require('../controller/renderResult');
+const renderResult2 = require('../controller/renderResult');
 
 module.exports = app => {
     // 服务端路由
