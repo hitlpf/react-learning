@@ -3,6 +3,6 @@ var reactDom = require('react-dom');
 
 import Test from './common/test';
 
-var test5 = new Test('pageA');
+var test6 = new Test('pageA');
 
 export default 'pageA';
