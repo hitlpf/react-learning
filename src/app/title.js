@@ -6,7 +6,7 @@ class Title extends React.Component {
         this.state = { name: 'andy', date2: new Date() };
     }
     render() {
-        return <h1>hello, {this.props.name}</h1>;
+        return <h1>hello, {this.props.theme}</h1>;
     }
 }
 

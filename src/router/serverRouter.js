@@ -9,6 +9,7 @@ module.exports = app => {
     // router.get('/', renderResult.Spa);
     router.get('/schedule', renderResult.Spa);
     router.get('/roster', renderResult.Spa);
+    router.get('/hoc', renderResult.Spa);
 
     router.get('/', renderResult.Index);
     router.get('/ssr', renderResult.Ssr);

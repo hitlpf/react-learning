@@ -29,6 +29,10 @@ class Home extends React.Component {
         this.setState({ date: new Date() });  
     }
     handleClick() {
+        import(/* webpackChunkName: "async2" */ '../common/async2').then(module => {
+            let Async2 = module.default;
+            new Async2('import Async2');
+        });
         this.setState(state => ({
           isToggleOn: !state.isToggleOn
         }));
@@ -37,14 +41,15 @@ class Home extends React.Component {
     render(){
         return (
             <div>
-                <Title name={this.state.name}/>
+                <Title name={this.state.name} theme={this.props.theme}/>
                 <h2>It is {this.state.date.toString()}</h2>
                 <img src={ logo } className="logo"/>
                 {/* <Button type="primary" onClick={this.handleClick}>{this.state.isToggleOn ? 'ON' : 'OFF'}</Button> */}
-                <Button type="primary" onClick={this.handleClick.bind(this)}>{this.state.isToggleOn ? 'ON' : 'OFF'}</Button>
+                <Button id='button1' type="primary" onClick={this.handleClick.bind(this)}>{this.state.isToggleOn ? 'ON' : 'OFF'}</Button>
             </div>
         );
     }
+
 }
 
 export default Home;

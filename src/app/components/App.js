@@ -1,12 +1,17 @@
-import React from 'react'
-import Header from './Header'
-import Main from './Main'
+import React, {Suspense, lazy} from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Header from './Header';
+import Main from './Main';
 
 const App = () => (
-  <div>
-    <Header />
-    <Main />
-  </div>
+    <Router>
+      {/* <Suspense fallback={<div>loading</div>}> */}
+        <div>
+          <Header />
+          <Main />
+        </div>
+      {/* </Suspense> */}
+    </Router>
 )
 
 export default App;

@@ -15,7 +15,7 @@ module.exports = env => {
     return merge(baseConfig, {
         mode: 'production',
         output: {
-            // publicPath: '//dlweb.sogoucdn.com/wapsearch/',
+            publicPath: '//dlweb.sogoucdn.com/reactsearch/',
             path: resolve('dist'),
             filename: "[name].[chunkhash:8].bundle.js",
             chunkFilename: '[name].[chunkhash:8].bundle.js' //import('').then() 这种懒加载生成的文件的命名规则

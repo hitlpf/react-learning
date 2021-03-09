@@ -82,6 +82,8 @@ class SearchBar extends React.Component {
     super(props);
     this.handleFilterTextChange = this.handleFilterTextChange.bind(this);
     this.handleInStockChange = this.handleInStockChange.bind(this);
+    this.focus = this.focus.bind(this);
+    this.ref = React.createRef();
   }
   
   handleFilterTextChange(e) {
@@ -91,26 +93,38 @@ class SearchBar extends React.Component {
   handleInStockChange(e) {
     this.props.onInStockChange(e.target.checked);
   }
+
+  focus(){
+    this.textInput.focus();
+    this.ref.current.checked = true;
+    console.log(this.ref.current.getAttribute('type'));
+  }
+
   
   render() {
     return (
+      <div>
       <form>
         <input
           type="text"
           placeholder="Search..."
           value={this.props.filterText}
           onChange={this.handleFilterTextChange}
+          ref={(input) => { this.textInput = input }}
         />
         <p>
           <input
             type="checkbox"
             checked={this.props.inStockOnly}
             onChange={this.handleInStockChange}
+            ref={this.ref}
           />
           {' '}
           Only show products in stock
         </p>
       </form>
+      <button  onClick={this.focus}>让input获取焦点</button>
+      </div>
     );
   }
 }
