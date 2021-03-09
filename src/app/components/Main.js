@@ -38,8 +38,8 @@ class Main extends React.Component {
         <Switch>
           <Route exact path='/' component={()=>(<Home theme={this.context}/>)}/>
           <Route exact path='/product' component={()=>(<Product products={PRODUCTS}/>)}/>
-          {/* <Route exact path='/hoc' component={()=>(<Hoc2/>)}/> */}
-          <Route path='/hoc' component={Schedule}/>
+          <Route exact path='/hoc' component={()=>(<Hoc2/>)}/>
+          {/* <Route path='/hoc' component={Schedule}/> */}
           <Route path='/schedule' component={Schedule}/>
         </Switch>
       {/* </ThemeContext.Provider> */}
